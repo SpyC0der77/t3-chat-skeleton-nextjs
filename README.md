@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# T3 Chat UI Skeleton
 
-## Getting Started
+A Next.js recreation of the T3 Chat interface for experimenting with its layout and styling.
 
-First, run the development server:
+## What it does
+
+- Resizable and collapsible sidebar.
+- Chat composer and model-selection interface.
+- Theme switching and responsive sidebar behavior.
+
+## Run locally
+
+Use Node.js 20.9+ and npm.
 
 ```bash
+git clone https://github.com/SpyC0der77/t3-chat-skeleton-nextjs.git
+cd t3-chat-skeleton-nextjs
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the production app |
+| `npm run start` | Serve a production build |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+Run `build` before `start`.
 
-To learn more about Next.js, take a look at the following resources:
+## Dependencies and limitations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This is a frontend skeleton. It does not connect to an AI model, stream responses, authenticate users, or store conversations in a backend. Some controls are placeholders.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Source layout
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [`src/app/page.tsx`](src/app/page.tsx): Interface and sidebar resize behavior.
+- [`src/app/globals.css`](src/app/globals.css): Theme and interface styles.
+- [`src/components/ui/sidebar.tsx`](src/components/ui/sidebar.tsx): Sidebar primitives.
